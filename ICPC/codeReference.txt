@@ -42,10 +42,19 @@ typedef vector<int, pii> viii;
 const int maxN = 100005;
 
 
+void solve(){
+
+}
+
 int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
-    
-    
+    //if(fopen("case.txt", "r")) freopen("case.txt", "r", stdin);
+    int t = 1;
+    //int t; cin>>t;
+    loop(i, 0, t){
+        solve();
+    }
+    return 0; 
 }
 
 

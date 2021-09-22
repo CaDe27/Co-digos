@@ -1,0 +1,13 @@
+Deyimar A. (julio de 2021). Hostinger Tutoriales. ¿ Cómo utilizar SFTP (Protocolo de transferencia de archivos SSH)? https://www.hostinger.mx/tutoriales/como-usar-sftp
+Loopeando. (abril de 2021). ¿Cómo conectarse por SSH (en Windows, Linux y MacOS)? Disponible en: https://www.loopeando.com/como-conectarse-por-ssh/
+Linuxize. (noviembre de 2020). who Command in Linux. Disponible en: https://linuxize.com/post/who-command-in-linux/
+Arora, H. (Sin fecha). HowToForge. Linux tty Command Tutorial for Beginners (with Examples). Disponible en: https://www.howtoforge.com/linux-tty-command/
+Hoffman, C. (septiembre de 2016). How to Geek. Are You Using IPv6 Yet? Should You Even Care? Disponible en: https://www.howtogeek.com/175566/htg-explains-are-you-using-ipv6-yet-should-you-even-care/
+Juncosa, M. (Sin fecha). AprendeDeRedes. Cabecera IP – Partes y explicación paso a paso Disponible en: https://aprendederedes.com/redes/ip/cabecera-ip/
+Estrada, A. (Sin fecha). UAM. El protocolo ICMP. Disponible en: https://academicos.azc.uam.mx/jestrada/archivos/redes2/capa2/ICMP.pdf
+Ionos. (marzo de 2020). Trama Ethernet: definición, estructura y variantes. Disponible en: https://www.ionos.mx/digitalguide/servidores/know-how/trama-ethernet/
+Chopra, R. (noviembre de 2019). IP fragmentation explained in Wireshark in under 10 minutes! [Archivo de video]. Disponible en: https://www.youtube.com/watch?v=YTdJZ0O7V5U
+Byron, S. (Sin fecha). ¿Qué es un puerto SSDP?. Disponible en:https://techlandia.com/puerto-ssdp-info_249696/
+Ionos. (agosto de 2020). Multicast DNS: la resolución de nombres para redes locales. Disponible en: https://www.ionos.mx/digitalguide/servidores/know-how/multicast-dns/
+WireShark. (abril de 2014). NetBIOS Name Service (NBNS). Disponible en: https://wiki.wireshark.org/NetBIOS/NBNS
+Brother. (sin fecha). Protocolos. Disponible en: https://support.brother.com/g/s/id/htmldoc/printer/cv_hl3040cn/spa/html/nug/chapter1_4_1.html

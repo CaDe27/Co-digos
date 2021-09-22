@@ -67,6 +67,9 @@
         "set": "cpp",
         "numeric": "cpp",
         "__functional_03": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "bit": "cpp",
+        "iomanip": "cpp",
+        "unordered_set": "cpp"
     }
 }
