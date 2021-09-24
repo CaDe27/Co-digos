@@ -1,12 +1,12 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <queue>
 using namespace std;
-typedef long long ll;
+typedef int64_t ll;
+typedef pair<int, int> pii; 
 
 const int MAXN = 1e5+10;
-vector<int> G[MAXN];
-int dp[MAXN];
-int P[MAXN];
-const int INF = 1e9;
+vector<int> adj[MAXN];
 const int MOD = 998244353;
 
 ll fast(ll a, ll b){
@@ -21,26 +21,6 @@ ll fast(ll a, ll b){
     return c;
 }
 
-void dfs(int u, int p){
-    for(auto v:G[u]){
-        if(v != p){
-            dfs(v,u);
-            dp[u] = min(dp[u],dp[v]+1);
-        }
-    }
-    if(G[u].size() == 1 && u != 1){
-        dp[u] = 1;
-    }
-}
-
-void q(int u){
-    for(auto v:G[u]){
-        if(v != P[u]){
-            dp[u] = min(dp[u],dp[P[u]]+1);
-            q(v);
-        }
-    }
-}
 
 int main()
 {
@@ -49,33 +29,39 @@ int main()
 
     int n; cin >> n;
 
-    P[1] = 1;
-
-    for(int i=2;i<=n;i++){
-        int a; cin >> a;
-        G[a].push_back(i);
-        G[i].push_back(a);
-        P[i] = a;
+    int mi;
+    for(int i=2;i < n+1;++i){
+        cin >> mi;
+        adj[mi].push_back(i);
+        adj[i].push_back(mi);
     }
 
-    for(int i=1;i<=n;i++){
-        dp[i] = INF;
+    bool visited[n+1];
+    fill(visited, visited+n+1, 0);
+    queue<pii> bfs;
+
+    //si soy hoja inicio la bfs
+    for(int i=2; i < n+1;i++)
+        if(adj[i].size() == 1)
+            bfs.push(pii(i, 1)); 
+
+    ll suma = 0;
+    int u, espera, v;
+    while(!bfs.empty()){
+        u = bfs.front().first;
+        espera = bfs.front().second;
+        bfs.pop();
+
+        if(visited[u]) continue;
+        visited[u] = true; 
+        suma += espera;
+        for(vector<int>::iterator itV = adj[u].begin(); itV != adj[u].end(); ++itV){
+            v = *itV;
+            if(!visited[v])
+                bfs.push(pii(v, espera+1));
+        }
     }
-
-    dfs(1,1);
-    q(1);
-
-    ll Q = 0;
-
-    for(int i=1;i<=n;i++){
-        Q += dp[i];
-    }
-
-    Q %= MOD;
-
-    ll r = fast(n,MOD-2);
-
-    cout << (Q*r)%MOD << "\n";
+    cout <<(suma*fast(n, MOD-2))%MOD << "\n";
 
     return 0;
 }

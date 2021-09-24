@@ -92,62 +92,9 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
-    if(fopen("case.txt", "r")) freopen("case.txt", "r", stdin);
-    cin>>n;
-    int s, milis;
-    string delay;
-    cin>>delay;
-    bool band = false;
-    s = milis = 0;
-    for(char c : delay){
-        if(c == '.') {
-            band = true;
-            continue;
-        }
-        if(!band){
-            s = 10*s + c-'0';
-        }else{
-            milis = 10*milis + c-'0';
-        }
-    }
-
-    string indx, lnum, linea;
-    loop(i, 0, n){
-        cin>>indx;
-        cout<<indx<<"\n";
-
-        cin>>lnum;
-        lnum = sumTiempo(lnum, s, milis);
-        cout<<lnum;
-        
-        cin>>linea;
-        cout<<" "+linea+" ";
-
-        cin>>lnum;
-        lnum = sumTiempo(lnum, s, milis);
-        cout<<lnum<<"\n";
-
-        
-        getline(cin, indx);
-        getline(cin, indx);
-        cout<<indx<<"\n";
-
-        if(i != n-1){
-            getline(cin, indx);
-            cout<<indx<<"\n";
-            if(indx.size() > 0){ 
-                getline(cin, indx);
-                cout<<indx<<"\n";
-            }
-        }
-        else{
-            string x2;
-            getline(cin, x2);
-            if(x2.size() > 0)
-                cout<<x2<<"\n";
-        }
-    }
-    
+    ll b = 1e9;
+    b = b*(50000)*(100000+1);
+    cout<<b<<endl;
     return 0;
 
 }

@@ -4,7 +4,14 @@
 #include <algorithm>
 using namespace std;
 
+#define loop(i,a,b) for(int i = a; i < b; ++i)
+#define MINF -1000000000000
+#define MOD 1000000007
+#define PI 3.14159265358979323846
+#define eps ((ld)1e-9)
+
 typedef int64_t ptype;
+
 struct PT {
     ptype x,y;
  
@@ -23,22 +30,39 @@ struct PT {
         return 3;
     }  
     ptype pp(const PT &p) {return x*p.x + y*p.y;}
-    bool paralelo(const PT &p){
-        PT ort = PT(y, -x);
-        return ort.pp(p) == 0;
-    }
-    bool aMiDer(const PT &p ){
-        PT ort = PT(y, -x);
-        if(ort.cuad() != (cuad() - 1 + 4)%4) 
-            ort = PT(-y, x);
-        return ort.pp(p) > 0;
-    }
-    bool aMiIzq(const PT &p){return !paralelo(p) && !aMiDer(p);}
-
+    ptype cross(const PT &p) {return x*p.y - y*p.x;}
+    bool paralelo(const PT &p){return cross(p) == 0;}
+    //asume que tanto yo como p son vectores
+    bool aMiDer(const PT &p ){return cross(p) < 0;}
+    bool aMiIzq(const PT &p){return cross(p) > 0;}
     void print(){cout<<x<<" "<<y<<endl;}
 };
+
+//right hand rule, if it's positive b is to the left of a
+//if negative to the right, if equal is cero
 ptype cross(const PT &a, const PT &b){return a.x*b.y - a.y*b.x;}
- 
+
+vector < PT > ConvexHull(vector < PT > &P){
+  sort(P.begin(), P.end());
+  vector < PT > U, L; //U for upper hull, L for lower hull
+  for(int i = 0; i < P.size(); ++i){
+    while(L.size() > 1 && (L[L.size()-1]-L[L.size()-2]).aMiDer(P[i]-L[L.size()-2]))
+      L.pop_back();
+    L.push_back(P[i]);
+  }
+  if(L.size() > 1) L.pop_back();
+  for(int i = P.size()-1; i > -1; --i){
+    //punto de referencia es el L.size()-2 y si es una vuelta a la izquierda, quito el .size()-1
+    while(U.size() > 1 && (U[U.size()-1]-U[U.size()-2]).aMiDer(P[i]-U[U.size()-2]) > 0)
+      U.pop_back();
+    U.push_back(P[i]);
+  }
+  if(U.size() > 1) U.pop_back();
+  L.insert(L.end(), U.begin(), U.end());
+  return L;
+}
+
+
 int n;
 vector<PT> mon, orig;
 PT centro;
@@ -48,7 +72,22 @@ bool counterClock(const PT &c, const PT &d){
     PT a = c - centro, b = d - centro; 
     return a.cuad() == b.cuad() ? a.x * b.y > a.y * b.x : a.cuad() < b.cuad();
 }
- 
+
+
+int main(){ 
+    vector<PT> a;
+    a.push_back(PT(1, 1));
+    a.push_back(PT(2, 1));
+    a.push_back(PT(2, 3));
+    a.push_back(PT(3, 1));
+    a.push_back(PT(2, 0));
+    vector<PT> ch = ConvexHull(a);
+    loop(i, 0, ch.size())
+        ch[i].print();
+
+    return 0;
+}
+
 //te dice si C esta por encima de la recta dirigida que va del centro actual a B
 bool arriba(const PT &b, const PT &c){return  cross(b -centro, c - centro) > 0;}
  
@@ -125,5 +164,3 @@ ptype resp;
     }
 }
  */
-
-int main(){ return 0;}
