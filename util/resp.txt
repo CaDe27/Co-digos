@@ -1,13 +1,9 @@
-Arora, H. (Sin fecha). HowToForge. Linux tty Command Tutorial for Beginners (with Examples). Disponible en: https://www.howtoforge.com/linux-tty-command/
-Brother. (sin fecha). Protocolos. Disponible en: https://support.brother.com/g/s/id/htmldoc/printer/cv_hl3040cn/spa/html/nug/chapter1_4_1.html
-Byron, S. (Sin fecha). ¿Qué es un puerto SSDP?. Disponible en:https://techlandia.com/puerto-ssdp-info_249696/
-Chopra, R. (noviembre de 2019). IP fragmentation explained in Wireshark in under 10 minutes! [Archivo de video]. Disponible en: https://www.youtube.com/watch?v=YTdJZ0O7V5U
-Deyimar A. (julio de 2021). Hostinger Tutoriales. ¿ Cómo utilizar SFTP (Protocolo de transferencia de archivos SSH)? https://www.hostinger.mx/tutoriales/como-usar-sftp
-Estrada, A. (Sin fecha). UAM. El protocolo ICMP. Disponible en: https://academicos.azc.uam.mx/jestrada/archivos/redes2/capa2/ICMP.pdf
-Hoffman, C. (septiembre de 2016). How to Geek. Are You Using IPv6 Yet? Should You Even Care? Disponible en: https://www.howtogeek.com/175566/htg-explains-are-you-using-ipv6-yet-should-you-even-care/
-Ionos. (agosto de 2020). Multicast DNS: la resolución de nombres para redes locales. Disponible en: https://www.ionos.mx/digitalguide/servidores/know-how/multicast-dns/
-Ionos. (marzo de 2020). Trama Ethernet: definición, estructura y variantes. Disponible en: https://www.ionos.mx/digitalguide/servidores/know-how/trama-ethernet/
-Juncosa, M. (Sin fecha). AprendeDeRedes. Cabecera IP – Partes y explicación paso a paso Disponible en: https://aprendederedes.com/redes/ip/cabecera-ip/
-Linuxize. (noviembre de 2020). who Command in Linux. Disponible en: https://linuxize.com/post/who-command-in-linux/
-Loopeando. (abril de 2021). ¿Cómo conectarse por SSH (en Windows, Linux y MacOS)? Disponible en: https://www.loopeando.com/como-conectarse-por-ssh/
-WireShark. (abril de 2014). NetBIOS Name Service (NBNS). Disponible en: https://wiki.wireshark.org/NetBIOS/NBNS
+
+Amazon AWS. (Sin fecha). Conceptos de árbol de expansión. Funcionamiento STP. Recuperado de: https://static-course-assets.s3.amazonaws.com/ScaN50ES/course/module2/2.1.2.5/2.1.2.5.html
+Arias, E. (Febrero, 2020). VTY lines. Recuperado de: https://learningnetwork.cisco.com/s/question/0D53i00000Kt7GR/vty-lines
+Bayardo, M. (Abril, 2021). Aleph. ¿Qués es un trunk en red? Recuperado de: https://aleph.org.mx/que-es-un-trunk-en-red
+CISCO Systems (2010). «Dynamic Trunking Protocol (DTP) Introduction» (online). CISCO Systems. Consultado el 13 de mayo de 2010. Recuperado de: https://www.cisco.com/c/en/us/tech/lan-switching/virtual-lans-vlan-trunking-protocol-vlans-vtp/index.html
+Cisco (Sin fecha). DEC y formatos BPDU 802.1d. Recuperado de: https://www.cisco.com/c/es_mx/support/docs/additional-legacy-protocols/dec-net/10691-3.pdf
+Cisco (Sin fecha). Inter-Switch Link y Formato de Trama IEEE 802.1Q. Recuperado de: https://www.cisco.com/c/es_mx/support/docs/lan-switching/8021q/17056-741-4.pdf
+Cisco (sin fecha). Protocolo de árbol de expansión. Recuperado de: https://www.cisco.com/c/es_mx/tech/lan-switching/spanning-tree-protocol/index.html
+Redes locales y globales. (Sin fecha). Indicadores LED en un conmutador. Recuperado de: https://sites.google.com/site/redeslocalesyglobales/2-aspectos-fisicos/5-dispositivos-de-interconexion-de-redes/4-conmutadores-switch/3-indicadores-led-en-un-conmutador

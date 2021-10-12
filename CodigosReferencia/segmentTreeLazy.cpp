@@ -9,6 +9,8 @@ using namespace std;
 const int maxN = 100000;
 int n;
 
+
+
 //for this tree:
 //update uses increment on a certain segment 
    
