@@ -1,4 +1,5 @@
 #include <vector>
+using namespace std;
 
 const int maxN = 1e5;
 vector<int> adj[maxN];
