@@ -54,6 +54,7 @@ int main(){
         cin>>s;
         fecha[i] = fechaADias(s);
     }
+    //ordeno por fecha de nacimiento
     vector<pii> fechaIndx;
     loop(i, 0, n)
         fechaIndx.push_back(pii(fecha[i], i));
@@ -63,8 +64,10 @@ int main(){
     int resps[n];
     int sigIndx;
     set<int> :: iterator it;
-    
     vector<int> sameDate;
+    //para cada fecha de nacimiento considero todos los indices con esa fecha
+    //y para cada uno de ellos checo el indice de la persona mas cercana antes de ellos
+    // que nacio despues
     int i = 0;
     while(i < n){
         sameDate.push_back(fechaIndx[i].second);
@@ -85,6 +88,7 @@ int main(){
         sameDate.clear();
     }
 
+    //imprimo las respuestas 
     int m; cin>>m;
     int q;
     loop(i, 0, m){

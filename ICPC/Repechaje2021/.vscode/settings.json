@@ -9,6 +9,7 @@
         "algorithm": "cpp",
         "vector": "cpp",
         "utility": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "functional": "cpp"
     }
 }
