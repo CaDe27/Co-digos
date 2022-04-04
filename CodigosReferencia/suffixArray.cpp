@@ -77,26 +77,6 @@ vector<int> suffix_array(string& s) {
     return vector<int>(p.begin() + 1, p.end());
 }
 
-// lcp[i] = lcp(i, i+1)
-// lcp(x, y) = min(lcp[x], lcp[x+1], ... lcp[y-1])
-vector<int> lcp_array(string& s, vector<int>& p) {
-    int N = s.size();
-    vector<int> c(N), lcp(N);
-    for (int i = 0; i < N; ++i)
-        c[p[i]] = i;
-    int k = 0;
-    for (int i = 0; i < N; ++i) {
-        if (c[i] < N - 1) {
-            int j = p[c[i] + 1];
-            while (max(i, j) + k < N && s[i + k] == s[j + k])
-                k++;
-            lcp[c[i]] = k;
-            k = max(k - 1, 0);
-        }
-    }
-    return lcp;
-}
-
 string ss;
 int sizeA;
 int itS;
