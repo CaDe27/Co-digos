@@ -55,10 +55,8 @@ void llenaPalindromos(){
     }
 }
 
-
 ll dp[maxN][500];
 ll DP(int n, int i){
-    //cout<<n<<" "<<i<<endl;
     if(n == 0)
         return 1;
     if(i == palindromos.size()-1)

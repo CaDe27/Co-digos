@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "algorithm": "cpp",
+        "iterator": "cpp",
+        "utility": "cpp",
+        "stack": "cpp",
+        "vector": "cpp",
+        "ostream": "cpp",
+        "queue": "cpp",
+        "complex": "cpp"
+    }
+}

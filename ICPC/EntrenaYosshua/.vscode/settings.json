@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "__tree": "cpp",
+        "map": "cpp",
+        "vector": "cpp",
+        "iostream": "cpp",
+        "string": "cpp",
+        "set": "cpp",
+        "utility": "cpp",
+        "algorithm": "cpp",
+        "ostream": "cpp",
+        "ios": "cpp"
+    }
+}

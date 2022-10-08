@@ -23,29 +23,28 @@
 #include <algorithm>
 #include <stack>
 using namespace std;
-void dfs1(int v,vector<int> adj[], bool visited[], stack<int> &next){
+const int maxN = 1e6;
+vector<int> adj[maxN], transpose[maxN];
+bool visited[maxN];
+stack<int> next;
+void dfs1(int v){
     visited[v] = true;
     for(int son: adj[v])
         if(!visited[son])
-            dfs1(son, adj, visited, next);
-    cout<<"meto a "<<v<<endl;
+            dfs1(son);
     next.push(v);
 }
 
-void dfs2(int v,vector<int> transpose[], bool visited[]){
+void dfs2(int v){
     visited[v] = true;
-    cout<<v<<" ";
     for(int son: transpose[v])
         if(!visited[son])
-            dfs2(son, transpose, visited);
+            dfs2(son);
 }
 
 int main(){
     if(fopen("case.txt", "r")) freopen("case.txt", "r", stdin);
     //supose nodes are from 0 to v-1
-    int v, e;
-    cin>>v>>e;
-    vector<int> adj[v], transpose[v];
     for(int i = 0; i < e; ++i){
         int a, b;
         cin>>a>>b;
@@ -54,11 +53,10 @@ int main(){
     }
 
     stack<int> next;
-    bool visited[v];
     fill(visited, visited+v, false);
     for(int i = 0; i < v; ++i){
         if(!visited[i])
-            dfs1(i, adj, visited, next);
+            dfs1(i);
     }
 
     fill(visited, visited+v, false);
