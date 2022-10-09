@@ -31,7 +31,6 @@ int refleja(int a){
 }
 
 void generaPalis(){
-    palindromos.push_back(0);
     palindromos.push_back(1);
     //primero los generamos
     // d representa los digitos de la parte reflejada
@@ -77,12 +76,17 @@ int main(){
     int a, b, indxa, indxb, resp;
     loop(i, 0, q){
         cin>>a>>b;
-        //resolver query 
+        //resolver query
+        if(a == 0) ++a; 
+        if(b == 0){
+            cout<<"0\n";
+            continue;
+        }
         indxa = binaria(a);
         indxb = binaria(b);
         resp = indxb - indxa;
-        //if(a == palindromos[indxa])
-        //    ++resp;
+        if(a == palindromos[indxa])
+            ++resp;
         cout<<resp<<"\n";
     }
     

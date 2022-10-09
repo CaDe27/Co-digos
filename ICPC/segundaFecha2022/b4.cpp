@@ -56,7 +56,7 @@ int64_t binaria(int64_t numero){
     int64_t ini = 0, fin = palindromos.size() - 1, mitad;
     while(ini != fin){
         mitad = (ini + fin + 1)/2;
-        if(palindromos[mitad] < numero)
+        if(palindromos[mitad] <= numero)
             ini = mitad;
         else
             fin = mitad - 1;
@@ -73,7 +73,6 @@ int main(){
     int64_t a, b, indxa, indxb, resp;
     for(int64_t i = 0; i < q; ++i){
         cin>>a>>b;
-        if(a > b) swap(a, b);
         //resolver query 
         indxa = binaria(a);
         indxb = binaria(b);
